@@ -39,14 +39,14 @@ def api_key_auth(x_api_key: str = Depends(X_API_KEY)):
             detail="Forbidden"
         )
 
-@app.get("/get_mock_data", dependencies=[Depends(api_key_auth)])
+@app.get("/api/get_mock_data", dependencies=[Depends(api_key_auth)])
 def get_mock_data():
     with open('pcs_controlitem.json') as f:
         data = json.load(f)
 
     return data
 
-@app.post("/convert_json_to_xlsx", dependencies=[Depends(api_key_auth)])
+@app.post("/api/convert_json_to_xlsx", dependencies=[Depends(api_key_auth)])
 def create_data(data: Dict[str, Union[str, List]]):
     templateFilePath = './templates/e-pcs-control-item-form-template.xlsx'
     random_name = str(uuid.uuid4())
