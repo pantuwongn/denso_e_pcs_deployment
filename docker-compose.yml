@@ -1,0 +1,34 @@
+version: "3.3"
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_web
+    ports:
+      - "80:80"
+    expose:
+      - 80
+    volumes:
+      - ./nginx/conf/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - web_epcs
+      - fastapi_epcs
+  web_epcs:
+    build: ./next-app
+    container_name: web_epcs
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./next-app/:/usr/app/
+      - dependencies:/usr/app/node_modules
+  fastapi_epcs:
+    build: ./fastapi-app
+    container_name: fastapi_epcs
+    ports: 
+      - "8888:8888"
+    volumes:
+      - ./fastapi-app/app/:/code/app/
+      - ./fastapi-app/:/code/
+      - ./fastapi-app/requirements.txt:/code/requirements.txt
+volumes:
+  dependencies:
+  fastapi_packages:
