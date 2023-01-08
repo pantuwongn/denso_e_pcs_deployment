@@ -47,7 +47,7 @@ def get_mock_data():
     return data
 
 @app.post("/api/convert_json_to_xlsx", dependencies=[Depends(api_key_auth)])
-def create_data(data: Dict[str, Union[str, List]]):
+def create_data(data: Dict[str, Union[str, List, Dict]]):
     templateFilePath = './templates/e-pcs-control-item-form-template.xlsx'
     random_name = str(uuid.uuid4())
     PCSForm(templateFilePath, data).generate(random_name)
