@@ -19,6 +19,7 @@ from utils import (
     headerNormalStyle,
     headerBoldStyle,
     textNormalStyle,
+    textLargeContentStyle,
     bottomBorder,
     bottomRightBorder,
     boxBorder,
@@ -27,7 +28,7 @@ from utils import (
     boxTopDashBorder
 )
 
-itemChunkSize = 17
+itemChunkSize = 12
 
 timingConnectorPath = 'images/timing/check-process.png'
 
@@ -139,13 +140,6 @@ def getParameter(parameterDict: dict):
     result = _appendTextIfExist(result, parameterDict, 'tolerance_down')
     result = _appendTextIfExist(result, parameterDict, 'unit')
     return result
-
-def getInterval(controlMethodDict: dict):
-    intervalText = controlMethodDict['interval']
-
-    if controlMethodDict['sample_no'] > 1:
-        intervalText = '{}\n(n={})'.format(intervalText, controlMethodDict['sample_no'])
-    return intervalText
 
 def getControlMethodDetail(controlMethodDict: dict):
     if controlMethodDict.get('calibration_interval', '') != '':
@@ -297,9 +291,7 @@ class PCSForm:
 
     def _writeProcessItem(self, startNumber:int, sheet: Worksheet, itemList: list, totalItemList: list):
         startRow = 12
-        rowStep = 3
-        startSeparatorColumn = 3
-        endSeparatorColumn = 15
+        rowStep = 4
         
         isInheritGroup = False
         groupDashValue = None
@@ -384,64 +376,76 @@ class PCSForm:
             )
             sheet.add_image(horizontalControlItemImg)
 
-        processDashLine = getVerticalDashLine(itemChunkSize * rowStep, startRow - 1, 0, -1, 7.5)
+        processDashLine = getVerticalDashLine(itemChunkSize * rowStep + 3, startRow - 1, 0, -1, 7.5)
         sheet.add_image(processDashLine)
 
         for i, item in enumerate(itemList):
             #   Cell merging
-            sheet.merge_cells('E{}:H{}'.format(startRow + (rowStep * i) + 2, startRow + (rowStep * i) + 2))
-            sheet.merge_cells('M{}:N{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + 2))
-            sheet.merge_cells('O{}:O{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + 2))
+            sheet.merge_cells('E{}:H{}'.format(startRow + (rowStep * i) + (rowStep - 1), startRow + (rowStep * i) + (rowStep - 1)))
+            sheet.merge_cells('M{}:N{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + (rowStep - 1)))
+            sheet.merge_cells('O{}:O{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + (rowStep - 1)))
+            sheet.merge_cells('I{}:I{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + 1))
+            sheet.merge_cells('J{}:J{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + 1))
+            sheet.merge_cells('K{}:K{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + 1))
             sheet.merge_cells('M7:O7')
             sheet.merge_cells('A9:F9')
 
             #   Cell bordering
             for j in range(4):
-                sheet.cell(row=startRow + (rowStep * i) + 2, column=5 + j).border = topDashBottomBorder
+                sheet.cell(row=startRow + (rowStep * i) + (rowStep - 1), column=5 + j).border = topDashBottomBorder
             for j in range(4):
-                sheet.cell(row=startRow + (rowStep * i) + 2, column=8 + j).border = boxTopDashBorder
+                sheet.cell(row=startRow + (rowStep * i) + (rowStep - 1), column=8 + j).border = boxTopDashBorder
             for j in range(4):
-                sheet.cell(row=startRow + (rowStep * i) + 2, column=12 + j).border = boxNoTopBorder
+                sheet.cell(row=startRow + (rowStep * i) + (rowStep - 1), column=12 + j).border = boxNoTopBorder
 
             #   Cell values
             sheet.cell(row=startRow + (rowStep * i), column=4).value = startNumber + (i + 1)
             sheet.cell(row=startRow + (rowStep * i), column=4).alignment = centerCenterAlignment
             sheet.cell(row=startRow + (rowStep * i), column=4).font = textNormalStyle
             sheet.cell(row=(startRow + (rowStep * i)), column=5).value = item['parameter']['parameter']
+            sheet.cell(row=startRow + (rowStep * i), column=5).alignment = topLeftAlignment
+            sheet.cell(row=startRow + (rowStep * i), column=5).font = textLargeContentStyle
             if item['parameter']['limit_type'] == 'None':
-                sheet.merge_cells('E{}:H{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + 1))
+                sheet.merge_cells('E{}:H{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + (rowStep - 2)))
             else:
-                sheet.merge_cells('E{}:H{}'.format(startRow + (rowStep * i), startRow + (rowStep * i)))
-                sheet.merge_cells('E{}:H{}'.format(startRow + (rowStep * i)+1, startRow + (rowStep * i) + 1))
-                sheet.cell(row=(startRow + (rowStep * i)) + 1, column=5).value = getParameter(item['parameter'])
-            sheet.cell(row=(startRow + (rowStep * i)), column=5).font = textNormalStyle
-            sheet.cell(row=(startRow + (rowStep * i) + 2), column=5).value = getMeasurement(item)
-            sheet.cell(row=(startRow + (rowStep * i) + 2), column=5).font = textNormalStyle
-            sheet.cell(row=(startRow + (rowStep * i)), column=5).alignment = topLeftAlignment
+                sheet.merge_cells('E{}:H{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + (rowStep - 3)))
+                sheet.merge_cells('E{}:H{}'.format(startRow + (rowStep * i) + (rowStep - 2), startRow + (rowStep * i) + (rowStep - 2)))
+                sheet.cell(row=(startRow + (rowStep * i)) + (rowStep - 2), column=5).value = getParameter(item['parameter'])
+            sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 1)), column=5).value = getMeasurement(item)
+            sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 1)), column=5).font = textNormalStyle
+            sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 1)), column=5).alignment = topLeftAlignment
             if item['control_method']['100_method'] == 'Auto check':
-                sheet.cell(row=(startRow + (rowStep * i)), column=9).border = bottomBorder
+                sheet.cell(row=(startRow + (rowStep * i) + 1), column=9).border = bottomBorder
                 sheet.cell(row=(startRow + (rowStep * i)), column=9).value = '100%'
-                sheet.cell(row=(startRow + (rowStep * i) + 1), column=9).value = getInterval(item['control_method'])
+
+                intervalText = item['control_method']['interval']
+                if item['control_method']['sample_no'] > 1:
+                    sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 2)), column=9).value = '{}\n(n={})'.format(intervalText, item['control_method']['sample_no'])
+                else:
+                    sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 2)), column=9).value = item['control_method']['interval']
+                
             else:
-                sheet.cell(row=(startRow + (rowStep * i)), column=9).value = getInterval(item['control_method'])
-            sheet.cell(row=(startRow + (rowStep * i)), column=9).font = textNormalStyle
-            sheet.cell(row=(startRow + (rowStep * i)), column=9).alignment = topCenterAlignment
-            sheet.cell(row=(startRow + (rowStep * i) + 2), column=9).value = item['control_method'].get('calibration_interval', '')
-            sheet.cell(row=(startRow + (rowStep * i) + 2), column=9).alignment = centerCenterAlignment
-            sheet.cell(row=(startRow + (rowStep * i) + 2), column=9).font = textNormalStyle
+                sheet.cell(row=(startRow + (rowStep * i)), column=9).value = item['control_method']['interval']
+                if item['control_method']['sample_no'] > 1:
+                    sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 2)), column=9).value = '(n={})'.format(item['control_method']['sample_no'])
+            sheet.cell(row=(startRow + (rowStep * i)), column=9).font = textLargeContentStyle
+            sheet.cell(row=(startRow + (rowStep * i)), column=9).alignment = centerCenterAlignment
+            sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 1)), column=9).value = item['control_method'].get('calibration_interval', '')
+            sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 1)), column=9).alignment = centerCenterAlignment
+            sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 1)), column=9).font = textNormalStyle
             
             if item['control_method']['100_method'] == 'None' or item['control_method']['100_method'] == '':
                 sheet.cell(row=(startRow + (rowStep * i)), column=10).value = item['control_item_type']
             else:
                 sheet.cell(row=(startRow + (rowStep * i)), column=10).border = boxBorder
                 sheet.cell(row=(startRow + (rowStep * i)), column=10).value = item['control_method']['100_method']
-                sheet.cell(row=(startRow + (rowStep * i) + 1), column=10).value = item['control_item_type']
+                sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 2)), column=10).value = item['control_item_type']
 
             sheet.cell(row=(startRow + (rowStep * i)), column=10).alignment = centerCenterAlignment
             sheet.cell(row=(startRow + (rowStep * i)), column=10).font = textNormalStyle
-            sheet.cell(row=(startRow + (rowStep * i)) + 2, column=10).value = getControlMethodDetail(item['control_method'])
-            sheet.cell(row=(startRow + (rowStep * i)) + 2, column=10).alignment = centerCenterAlignment
-            sheet.cell(row=(startRow + (rowStep * i)) + 2, column=10).font = textNormalStyle
+            sheet.cell(row=(startRow + (rowStep * i)) + (rowStep - 1), column=10).value = getControlMethodDetail(item['control_method'])
+            sheet.cell(row=(startRow + (rowStep * i)) + (rowStep - 1), column=10).alignment = centerCenterAlignment
+            sheet.cell(row=(startRow + (rowStep * i)) + (rowStep - 1), column=10).font = textNormalStyle
             sheet.cell(row=(startRow + (rowStep * i)), column=11).value = item['control_method']['in_charge']
             sheet.cell(row=(startRow + (rowStep * i)), column=11).alignment = centerCenterAlignment
             sheet.cell(row=(startRow + (rowStep * i)), column=11).font = textNormalStyle
@@ -476,9 +480,9 @@ class PCSForm:
             if currentIndexInTotal + 1 >= len(totalItemList):
                 if groupDashLength > 1:
                     if isInheritGroup:
-                        vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - 3 + 1.5, startRow + (rowStep * groupDashStart), 1, 8 - 28, 4)
+                        vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - rowStep + 1.5, startRow + (rowStep * groupDashStart), 1, 8 - 28, 4)
                     else:
-                        vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - 3, startRow + (rowStep * groupDashStart), 1, 8, 4)
+                        vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - rowStep, startRow + (rowStep * groupDashStart), 1, 8, 4)
                     sheet.add_image(vertDashImg)
                 groupDashValue = None
                 groupDashStart = None
@@ -488,9 +492,9 @@ class PCSForm:
             elif i + 1 >= len(itemList):
                 if groupDashLength > 1:
                     if isInheritGroup:
-                        vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - 3 + 1.5 + 1.5 if currentIndexInTotal + 1 < len(totalItemList) and groupDashValue == totalItemList[currentIndexInTotal + 1]['check_timing'] else 0, startRow + (rowStep * groupDashStart), 1, 8 - 28, 4)
+                        vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - rowStep + (rowStep * 1.8) if currentIndexInTotal + 1 < len(totalItemList) and groupDashValue == totalItemList[currentIndexInTotal + 1]['check_timing'] else 0, startRow + (rowStep * groupDashStart), 1, 8 - 28, 4)
                     else:
-                        vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - 3 + 1.5 if currentIndexInTotal + 1 < len(totalItemList) and groupDashValue == totalItemList[currentIndexInTotal + 1]['check_timing'] else 0, startRow + (rowStep * groupDashStart), 1, 8, 4)
+                        vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - rowStep + 1.5 + 4.5 if currentIndexInTotal + 1 < len(totalItemList) and groupDashValue == totalItemList[currentIndexInTotal + 1]['check_timing'] else 0, startRow + (rowStep * groupDashStart), 1, 8, 4)
 
                     sheet.add_image(vertDashImg)
                 groupDashValue = None
@@ -502,10 +506,9 @@ class PCSForm:
                 if itemList[i + 1]['check_timing'] != groupDashValue:
                     if groupDashLength > 1:
                         if isInheritGroup:
-                            print('in')
-                            vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - 3 + 1.5, startRow + (rowStep * groupDashStart), 1, 8 - 28, 4)
+                            vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - rowStep + 1.5, startRow + (rowStep * groupDashStart), 1, 8 - 28, 4)
                         else:
-                            vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - 3, startRow + (rowStep * groupDashStart), 1, 8, 4)
+                            vertDashImg = getVerticalDashLine((groupDashLength * (rowStep - 0.01)) - rowStep, startRow + (rowStep * groupDashStart), 1, 8, 4)
                         sheet.add_image(vertDashImg)
                     groupDashValue = None
                     groupDashStart = None

@@ -66,6 +66,7 @@ topLeftAlignment = Alignment(
 headerNormalStyle = Font(name='CordiaUPC', size=14, color='000000')
 headerBoldStyle = Font(name='CordiaUPC', size=14, color='000000', bold=True)
 textNormalStyle = Font(name='CordiaUPC', size=10, color='000000')
+textLargeContentStyle = Font(name='CordiaUPC', size=8, color='000000')
 
 def getOutputFilePath(fileName):
     return '{outputDir}/{fileName}.xlsx'.format(
