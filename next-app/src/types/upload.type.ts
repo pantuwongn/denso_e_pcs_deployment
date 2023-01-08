@@ -14,7 +14,7 @@ export interface PCSUploadForm {
   assy_name: string
   part_name: string
   customer: string
-  processes: PCSProcess[]
+  processes: PCSProcess
 }
 
 export interface PCSProcess {
