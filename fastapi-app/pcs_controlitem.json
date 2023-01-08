@@ -6,1764 +6,1622 @@
   "assy_name": "Starter Assy / As assy list",
   "part_name": "Armature Assy Starter / TG123456-1234",
   "customer": "ABC / ABC123 / ZXC",
-  "processes": [
-    {
-      "name": "01 / Process-1",
-      "items": [
-        {
-          "control_item_no": 1,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "ทำการตรวจสอบเครื่องจักรก่อนเริ่มการผลิต",
-            "master_value": 0,
-            "limit_type": "None",
-            "prefix": "",
-            "main": "",
-            "suffix": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [],
-          "check_timing": "Before",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "At start",
-            "100_method": "None",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "10-Oct-2022"
+  "processes": {
+    "name": "01 / Process-1",
+    "items": [
+      {
+        "control_item_no": 1,
+        "control_item_type": "Check sheet",
+        "parameter": {
+          "parameter": "ทำการตรวจสอบเครื่องจักรก่อนเริ่มการผลิต",
+          "master_value": 0,
+          "limit_type": "None",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "",
+          "lower_limit": "",
+          "unit": ""
         },
-        {
-          "control_item_no": 2,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Coil cutting length",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "15",
-            "sign": "±",
-            "tolerance_up": "0.5",
-            "tolerance_down": "",
-            "upper_limit": "15.5",
-            "lower_limit": "14.5",
-            "unit": "mm."
-          },
-          "sc_symbols": [
-            {
-              "character": "SP",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "During",
-          "control_method": {
-            "sample_no": 2,
-            "interval": "4/Shift",
-            "100_method": "None",
-            "in_charge": "Operator",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Caliper vernier",
-          "readability": "0.01",
-          "start_effective": "11-Nov-2022"
+        "sc_symbols": [],
+        "check_timing": "Before",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "At start",
+          "100_method": "None",
+          "in_charge": "LL",
+          "calibration_interval": ""
         },
-        {
-          "control_item_no": 3,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Die position check",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "1500",
-            "sign": "~",
-            "tolerance_up": "1800",
-            "tolerance_down": "",
-            "upper_limit": "1800",
-            "lower_limit": "1500",
-            "unit": "µm"
-          },
-          "sc_symbols": [
-            {
-              "character": "C",
-              "shape": "none"
-            }
-          ],
-          "check_timing": "During",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "Auto check",
-            "in_charge": "Operator",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "ให้ตรวจสอบขณะที่ชิ้นงานถูกกดจนสุดจึงทำการวัด",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Linear guage",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
         },
-        {
-          "control_item_no": 4,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "Punch position confirm",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [
-            {
-              "character": "F",
-              "shape": "circle"
-            },
-            {
-              "character": "RW",
-              "shape": "rectangle"
-            }
-          ],
-          "check_timing": "During",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "At start, when change",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "9-Sep-2022"
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
         },
-        {
-          "control_item_no": 5,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "Appearance : ลวดต้องอยู่ในสภาพ\n-ไม่แบน, งอ\n-ปลายลวดต้องไม่มี burr",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [
-            {
-              "character": "RW",
-              "shape": "rectangle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 2,
-            "interval": "4/Shift, when change",
-            "100_method": "Check",
-            "in_charge": "Operator",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "WS-001",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "9-Sep-2022"
+        "measurement": "Visual",
+        "readability": "",
+        "start_effective": "10-Oct-2022"
+      },
+      {
+        "control_item_no": 2,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Coil cutting length",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "15",
+          "suffix": "±",
+          "tolerance_up": "0.5",
+          "tolerance_down": "",
+          "upper_limit": "15.5",
+          "lower_limit": "14.5",
+          "unit": "mm"
         },
-        {
-          "control_item_no": 6,
-          "control_item_type": "x-R chart",
-          "parameter": {
-            "parameter": "Coil diameter",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "Ø",
-            "limit": "3.2",
-            "sign": "±",
-            "tolerance_up": "0.1",
-            "tolerance_down": "",
-            "upper_limit": "3.3",
-            "lower_limit": "3.1",
-            "unit": ""
-          },
-          "sc_symbols": [
-            {
-              "character": "S",
-              "shape": "diamond"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "15.324",
-            "cpk": "3.124"
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": "TEC-001"
-          },
-          "measurement": "Micrometer",
-          "readability": "0.001",
-          "start_effective": "9-Sep-2022"
+        "sc_symbols": [
+          {
+            "character": "SP",
+            "shape": "circle"
+          }
+        ],
+        "check_timing": "Before",
+        "control_method": {
+          "sample_no": 2,
+          "interval": "4/Shift",
+          "100_method": "None",
+          "in_charge": "Operator",
+          "calibration_interval": "6 Month"
         },
-        {
-          "control_item_no": 7,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Coil taper",
-            "master_value": 0,
-            "limit_type": "Upper only",
-            "symbolic": "",
-            "limit": "30",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "30",
-            "lower_limit": "",
-            "unit": "°"
-          },
-          "sc_symbols": [
-            {
-              "character": "S",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift, when change cutter",
-            "100_method": "",
-            "in_charge": "Operator",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Microscope",
-          "readability": "0.01",
-          "start_effective": "9-Sep-2022"
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
         },
-        {
-          "control_item_no": 8,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Chamfer",
-            "master_value": 0,
-            "limit_type": "Lower only",
-            "symbolic": "",
-            "limit": "0.15",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "0.15",
-            "unit": "mm."
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "1/W",
-            "100_method": "",
-            "in_charge": "LL to inspection",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "CMM",
-          "readability": "0.001",
-          "start_effective": "9-Sep-2022"
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
         },
-        {
-          "control_item_no": 9,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Dummy-1",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "456",
-            "lower_limit": "123",
-            "unit": "N"
-          },
-          "sc_symbols": [
-            {
-              "character": "SP",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Tool",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+        "measurement": "Caliper vernier",
+        "readability": "0.01",
+        "start_effective": "11-Nov-2022"
+      },
+      {
+        "control_item_no": 3,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Die position check",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "1500",
+          "suffix": "~",
+          "tolerance_up": "1800",
+          "tolerance_down": "",
+          "upper_limit": "1800",
+          "lower_limit": "1500",
+          "unit": "µm"
         },
-        {
-          "control_item_no": 10,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Dummy-2",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "456",
-            "lower_limit": "123",
-            "unit": "N"
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Tool",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+        "sc_symbols": [
+          {
+            "character": "C",
+            "shape": "none"
+          }
+        ],
+        "check_timing": "Before",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "Auto check",
+          "in_charge": "Operator",
+          "calibration_interval": "6 Month"
         },
-        {
-          "control_item_no": 11,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Dummy-3",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "456",
-            "lower_limit": "123",
-            "unit": "N"
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Tool",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
         },
-        {
-          "control_item_no": 12,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Dummy-4",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "456",
-            "lower_limit": "123",
-            "unit": "N"
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Tool",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+        "remark": {
+          "remark": "ให้ตรวจสอบขณะที่ชิ้นงานถูกกดจนสุดจึงทำการวัด",
+          "ws_no": "",
+          "related_std": ""
         },
-        {
-          "control_item_no": 13,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Dummy-5",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "456",
-            "lower_limit": "123",
-            "unit": "N"
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Tool",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+        "measurement": "Linear guage",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 4,
+        "control_item_type": "Check sheet",
+        "parameter": {
+          "parameter": "Punch position confirm",
+          "master_value": 0,
+          "limit_type": "None",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "",
+          "lower_limit": "",
+          "unit": ""
         },
-        {
-          "control_item_no": 14,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Dummy-6",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "456",
-            "lower_limit": "123",
-            "unit": "N"
+        "sc_symbols": [
+          {
+            "character": "F",
+            "shape": "circle"
           },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Tool",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+          {
+            "character": "RW",
+            "shape": "rectangle"
+          }
+        ],
+        "check_timing": "During",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "At start, when change",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
         },
-        {
-          "control_item_no": 15,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Dummy-7",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "456",
-            "lower_limit": "123",
-            "unit": "N"
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Tool",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
         },
-        {
-          "control_item_no": 16,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Dummy-8",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "456",
-            "lower_limit": "123",
-            "unit": "N"
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Tool",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
         },
-        {
-          "control_item_no": 17,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "ทำการตรวจสอบเครื่องจักรก่อนเริ่มการผลิต",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "At start",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "9-Sep-2022"
+        "measurement": "Visual",
+        "readability": "",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 5,
+        "control_item_type": "Check sheet",
+        "parameter": {
+          "parameter": "Appearance : ลวดต้องอยู่ในสภาพ\n-ไม่แบน, งอ\n-ปลายลวดต้องไม่มี burr",
+          "master_value": 0,
+          "limit_type": "None",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "",
+          "lower_limit": "",
+          "unit": ""
         },
-        {
-          "control_item_no": 18,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Coil cutting length",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "17",
-            "sign": "",
-            "tolerance_up": "1",
-            "tolerance_down": "-2",
-            "upper_limit": "15.5",
-            "lower_limit": "14.5",
-            "unit": "mm."
-          },
-          "sc_symbols": [
-            {
-              "character": "F",
-              "shape": "triangle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "None",
-            "in_charge": "Operator",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Caliper vernier",
-          "readability": "0.01",
-          "start_effective": "9-Sep-2022"
+        "sc_symbols": [
+          {
+            "character": "RW",
+            "shape": "rectangle"
+          }
+        ],
+        "check_timing": "During",
+        "control_method": {
+          "sample_no": 2,
+          "interval": "4/Shift, when change",
+          "100_method": "Check",
+          "in_charge": "Operator",
+          "calibration_interval": ""
         },
-        {
-          "control_item_no": 19,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Die position check",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "Amplitude",
-            "limit": "1500",
-            "sign": "~",
-            "tolerance_up": "1800",
-            "tolerance_down": "",
-            "upper_limit": "1800",
-            "lower_limit": "1500",
-            "unit": "µm"
-          },
-          "sc_symbols": [],
-          "check_timing": "During",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "Auto check",
-            "in_charge": "Operator",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Linear guage",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
-        }
-      ]
-    },
-    {
-      "name": "02 / Process-2",
-      "items": [
-        {
-          "control_item_no": 1,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "ทำการตรวจสอบเครื่องจักรก่อนเริ่มการผลิต",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [],
-          "check_timing": "Before",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "At start",
-            "100_method": "None",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "10-Oct-2022"
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
         },
-        {
-          "control_item_no": 2,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Coil cutting length",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "15",
-            "sign": "±",
-            "tolerance_up": "0.5",
-            "tolerance_down": "",
-            "upper_limit": "15.5",
-            "lower_limit": "14.5",
-            "unit": "mm."
-          },
-          "sc_symbols": [
-            {
-              "character": "SP",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "Before",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "None",
-            "in_charge": "Operator",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Caliper vernier",
-          "readability": "0.01",
-          "start_effective": "9-Nov-2022"
+        "remark": {
+          "remark": "",
+          "ws_no": "WS-001",
+          "related_std": ""
         },
-        {
-          "control_item_no": 3,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Die position check",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "1500",
-            "sign": "~",
-            "tolerance_up": "1800",
-            "tolerance_down": "",
-            "upper_limit": "1800",
-            "lower_limit": "1500",
-            "unit": "µm"
-          },
-          "sc_symbols": [],
-          "check_timing": "During",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "Auto check",
-            "in_charge": "Operator",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "WS-002",
-            "related_std": ""
-          },
-          "measurement": "Linear guage",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+        "measurement": "Visual",
+        "readability": "",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 6,
+        "control_item_type": "x-Rs chart",
+        "parameter": {
+          "parameter": "Coil diameter",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "Ø",
+          "main": "3.2",
+          "suffix": "±",
+          "tolerance_up": "0.1",
+          "tolerance_down": "",
+          "upper_limit": "3.3",
+          "lower_limit": "3.1",
+          "unit": ""
         },
-        {
-          "control_item_no": 4,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "Punch position confirm",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [
-            {
-              "character": "F",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "During",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "At start, when change",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "9-Sep-2022"
+        "sc_symbols": [
+          {
+            "character": "S",
+            "shape": "diamond"
+          }
+        ],
+        "check_timing": "During",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": "6 Month"
         },
-        {
-          "control_item_no": 5,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "Appearance : ลวดต้องอยู่ในสภาพ\n-ไม่แบน, งอ\n-ปลายลวดต้องไม่มี burr",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [
-            {
-              "character": "RW",
-              "shape": "rectangle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift, when change",
-            "100_method": "Check",
-            "in_charge": "Operator",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "ให้ตรวจสอบขณะที่ชิ้นงานถูกกดจนสุดจึงทำการวัด",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "9-Sep-2022"
+        "initial_p_capability": {
+          "x_bar": "15.324",
+          "cpk": "3.124"
         },
-        {
-          "control_item_no": 6,
-          "control_item_type": "x-R chart",
-          "parameter": {
-            "parameter": "Coil diameter",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "Ø",
-            "limit": "3.2",
-            "sign": "±",
-            "tolerance_up": "0.1",
-            "tolerance_down": "",
-            "upper_limit": "3.3",
-            "lower_limit": "3.1",
-            "unit": ""
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "15.324",
-            "cpk": "3.124"
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Micrometer",
-          "readability": "0.001",
-          "start_effective": "9-Sep-2022"
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": "TEC-001"
         },
-        {
-          "control_item_no": 7,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Coil taper",
-            "master_value": 0,
-            "limit_type": "Upper only",
-            "symbolic": "",
-            "limit": "30",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "30",
-            "lower_limit": "",
-            "unit": "°"
-          },
-          "sc_symbols": [
-            {
-              "character": "S",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift, when change cutter",
-            "100_method": "",
-            "in_charge": "Operator",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": "TEC-002"
-          },
-          "measurement": "Microscope",
-          "readability": "0.01",
-          "start_effective": "9-Sep-2022"
+        "measurement": "Micrometer",
+        "readability": "0.001",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 7,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Coil taper",
+          "master_value": 0,
+          "limit_type": "Upper only",
+          "prefix": "",
+          "main": "30",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "30",
+          "lower_limit": "",
+          "unit": "°"
         },
-        {
-          "control_item_no": 8,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Chamfer",
-            "master_value": 0,
-            "limit_type": "Lower only",
-            "symbolic": "",
-            "limit": "0.15",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "0.15",
-            "unit": "mm."
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "1/W",
-            "100_method": "",
-            "in_charge": "LL to inspection",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "CMM",
-          "readability": "0.001",
-          "start_effective": "9-Sep-2022"
-        }
-      ]
-    },
-    {
-      "name": "03 / Process-3",
-      "items": [
-        {
-          "control_item_no": 1,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "ทำการตรวจสอบเครื่องจักรก่อนเริ่มการผลิต",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [],
-          "check_timing": "During",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "At start",
-            "100_method": "None",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "10-Oct-2022"
+        "sc_symbols": [
+          {
+            "character": "S",
+            "shape": "circle"
+          }
+        ],
+        "check_timing": "During",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift, when change cutter",
+          "100_method": "",
+          "in_charge": "Operator",
+          "calibration_interval": ""
         },
-        {
-          "control_item_no": 2,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Coil cutting length",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "15",
-            "sign": "±",
-            "tolerance_up": "0.5",
-            "tolerance_down": "",
-            "upper_limit": "15.5",
-            "lower_limit": "14.5",
-            "unit": "mm."
-          },
-          "sc_symbols": [
-            {
-              "character": "SP",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "During",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "None",
-            "in_charge": "Operator",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Caliper vernier",
-          "readability": "0.01",
-          "start_effective": "9-Nov-2022"
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
         },
-        {
-          "control_item_no": 3,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Die position check",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "1500",
-            "sign": "~",
-            "tolerance_up": "1800",
-            "tolerance_down": "",
-            "upper_limit": "1800",
-            "lower_limit": "1500",
-            "unit": "µm"
-          },
-          "sc_symbols": [],
-          "check_timing": "During",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "Auto check",
-            "in_charge": "Operator",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "WS-002",
-            "related_std": ""
-          },
-          "measurement": "Linear guage",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
         },
-        {
-          "control_item_no": 4,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "Punch position confirm",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [
-            {
-              "character": "F",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "During",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "At start, when change",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "9-Sep-2022"
+        "measurement": "Microscope",
+        "readability": "0.01",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 8,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Chamfer",
+          "master_value": 0,
+          "limit_type": "Lower only",
+          "prefix": "",
+          "main": "0.15",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "",
+          "lower_limit": "0.15",
+          "unit": "mm"
         },
-        {
-          "control_item_no": 5,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "Appearance : ลวดต้องอยู่ในสภาพ\n-ไม่แบน, งอ\n-ปลายลวดต้องไม่มี burr",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [
-            {
-              "character": "RW",
-              "shape": "rectangle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 2,
-            "interval": "4/Shift, when change",
-            "100_method": "Check",
-            "in_charge": "Operator",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "ให้ตรวจสอบขณะที่ชิ้นงานถูกกดจนสุดจึงทำการวัด",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "9-Sep-2022"
+        "sc_symbols": [],
+        "check_timing": "During",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "1/W",
+          "100_method": "",
+          "in_charge": "LL to inspection",
+          "calibration_interval": ""
         },
-        {
-          "control_item_no": 6,
-          "control_item_type": "x-R chart",
-          "parameter": {
-            "parameter": "Coil diameter",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "Ø",
-            "limit": "3.2",
-            "sign": "±",
-            "tolerance_up": "0.1",
-            "tolerance_down": "",
-            "upper_limit": "3.3",
-            "lower_limit": "3.1",
-            "unit": ""
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "15.324",
-            "cpk": "3.124"
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Micrometer",
-          "readability": "0.001",
-          "start_effective": "9-Sep-2022"
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
         },
-        {
-          "control_item_no": 7,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Coil taper",
-            "master_value": 0,
-            "limit_type": "Upper only",
-            "symbolic": "",
-            "limit": "30",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "30",
-            "lower_limit": "",
-            "unit": "°"
-          },
-          "sc_symbols": [
-            {
-              "character": "S",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift, when change cutter",
-            "100_method": "",
-            "in_charge": "Operator",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": "TEC-002"
-          },
-          "measurement": "Microscope",
-          "readability": "0.01",
-          "start_effective": "9-Sep-2022"
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
         },
-        {
-          "control_item_no": 8,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Chamfer",
-            "master_value": 0,
-            "limit_type": "Lower only",
-            "symbolic": "",
-            "limit": "15",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "0.15",
-            "unit": "mm."
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "1/W",
-            "100_method": "",
-            "in_charge": "LL to inspection",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "CMM",
-          "readability": "0.001",
-          "start_effective": "9-Sep-2022"
-        }
-      ]
-    },
-    {
-      "name": "04 / Process-4",
-      "items": [
-        {
-          "control_item_no": 1,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "ทำการตรวจสอบเครื่องจักรก่อนเริ่มการผลิต",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "At start",
-            "100_method": "None",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "10-Oct-2022"
+        "measurement": "CMM",
+        "readability": "0.001",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 9,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-1",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
         },
-        {
-          "control_item_no": 2,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Coil cutting length",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "15",
-            "sign": "±",
-            "tolerance_up": "0.5",
-            "tolerance_down": "",
-            "upper_limit": "15.5",
-            "lower_limit": "14.5",
-            "unit": "mm."
-          },
-          "sc_symbols": [
-            {
-              "character": "SP",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "None",
-            "in_charge": "Operator",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Caliper vernier",
-          "readability": "0.01",
-          "start_effective": "9-Nov-2022"
+        "sc_symbols": [
+          {
+            "character": "SP",
+            "shape": "circle"
+          }
+        ],
+        "check_timing": "During",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
         },
-        {
-          "control_item_no": 3,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Die position check",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "",
-            "limit": "1500",
-            "sign": "~",
-            "tolerance_up": "1800",
-            "tolerance_down": "",
-            "upper_limit": "1800",
-            "lower_limit": "1500",
-            "unit": "µm"
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "Auto check",
-            "in_charge": "Operator",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "WS-002",
-            "related_std": ""
-          },
-          "measurement": "Linear guage",
-          "readability": "1",
-          "start_effective": "9-Sep-2022"
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
         },
-        {
-          "control_item_no": 4,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "Punch position confirm",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [
-            {
-              "character": "F",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "At start, when change",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "9-Sep-2022"
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
         },
-        {
-          "control_item_no": 5,
-          "control_item_type": "Check sheet",
-          "parameter": {
-            "parameter": "Appearance : ลวดต้องอยู่ในสภาพ\n-ไม่แบน, งอ\n-ปลายลวดต้องไม่มี burr",
-            "master_value": 0,
-            "limit_type": "None",
-            "symbolic": "",
-            "limit": "",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "",
-            "unit": ""
-          },
-          "sc_symbols": [
-            {
-              "character": "RW",
-              "shape": "rectangle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 2,
-            "interval": "4/Shift, when change",
-            "100_method": "Check",
-            "in_charge": "Operator",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "ให้ตรวจสอบขณะที่ชิ้นงานถูกกดจนสุดจึงทำการวัด",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Visual",
-          "readability": "",
-          "start_effective": "9-Sep-2022"
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 10,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-2",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
         },
-        {
-          "control_item_no": 6,
-          "control_item_type": "x-R chart",
-          "parameter": {
-            "parameter": "Coil diameter",
-            "master_value": 0,
-            "limit_type": "Both",
-            "symbolic": "Ø",
-            "limit": "3.2",
-            "sign": "±",
-            "tolerance_up": "0.1",
-            "tolerance_down": "",
-            "upper_limit": "3.3",
-            "lower_limit": "3.1",
-            "unit": ""
-          },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift",
-            "100_method": "",
-            "in_charge": "LL",
-            "calibration_interval": "6 Month"
-          },
-          "initial_p_capability": {
-            "x_bar": "15.324",
-            "cpk": "3.124"
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "Micrometer",
-          "readability": "0.001",
-          "start_effective": "9-Sep-2022"
+        "sc_symbols": [],
+        "check_timing": "During",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
         },
-        {
-          "control_item_no": 7,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Coil taper",
-            "master_value": 0,
-            "limit_type": "Upper only",
-            "symbolic": "",
-            "limit": "30",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "30",
-            "lower_limit": "",
-            "unit": "°"
-          },
-          "sc_symbols": [
-            {
-              "character": "S",
-              "shape": "circle"
-            }
-          ],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "4/Shift, when change cutter",
-            "100_method": "",
-            "in_charge": "Operator",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": "TEC-002"
-          },
-          "measurement": "Microscope",
-          "readability": "0.01",
-          "start_effective": "9-Sep-2022"
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
         },
-        {
-          "control_item_no": 8,
-          "control_item_type": "Record sheet",
-          "parameter": {
-            "parameter": "Chamfer",
-            "master_value": 0,
-            "limit_type": "Lower only",
-            "symbolic": "",
-            "limit": "0.15",
-            "sign": "",
-            "tolerance_up": "",
-            "tolerance_down": "",
-            "upper_limit": "",
-            "lower_limit": "0.15",
-            "unit": "mm."
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 11,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-3",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 12,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-4",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 13,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-5",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 14,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-6",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 15,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-7",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 16,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-8",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 17,
+        "control_item_type": "Check sheet",
+        "parameter": {
+          "parameter": "ทำการตรวจสอบเครื่องจักรก่อนเริ่มการผลิต",
+          "master_value": 0,
+          "limit_type": "None",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "",
+          "lower_limit": "",
+          "unit": ""
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "At start",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Visual",
+        "readability": "",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 18,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Coil cutting length",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "17",
+          "suffix": "",
+          "tolerance_up": "1",
+          "tolerance_down": "-2",
+          "upper_limit": "15.5",
+          "lower_limit": "14.5",
+          "unit": "mm"
+        },
+        "sc_symbols": [
+          {
+            "character": "F",
+            "shape": "triangle"
+          }
+        ],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "None",
+          "in_charge": "Operator",
+          "calibration_interval": "6 Month"
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Caliper vernier",
+        "readability": "0.01",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 19,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Die position check",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "Amplitude",
+          "main": "1500",
+          "suffix": "~",
+          "tolerance_up": "1800",
+          "tolerance_down": "",
+          "upper_limit": "1800",
+          "lower_limit": "1500",
+          "unit": "µm"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "Auto check",
+          "in_charge": "Operator",
+          "calibration_interval": "6 Month"
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Linear guage",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 20,
+        "control_item_type": "Check sheet",
+        "parameter": {
+          "parameter": "ทำการตรวจสอบเครื่องจักรก่อนเริ่มการผลิต",
+          "master_value": 0,
+          "limit_type": "None",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "",
+          "lower_limit": "",
+          "unit": ""
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "At start",
+          "100_method": "None",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Visual",
+        "readability": "",
+        "start_effective": "10-Oct-2022"
+      },
+      {
+        "control_item_no": 21,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Coil cutting length",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "15",
+          "suffix": "±",
+          "tolerance_up": "0.5",
+          "tolerance_down": "",
+          "upper_limit": "15.5",
+          "lower_limit": "14.5",
+          "unit": "mm"
+        },
+        "sc_symbols": [
+          {
+            "character": "SP",
+            "shape": "circle"
+          }
+        ],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 2,
+          "interval": "4/Shift",
+          "100_method": "None",
+          "in_charge": "Operator",
+          "calibration_interval": "6 Month"
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Caliper vernier",
+        "readability": "0.01",
+        "start_effective": "11-Nov-2022"
+      },
+      {
+        "control_item_no": 22,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Die position check",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "1500",
+          "suffix": "~",
+          "tolerance_up": "1800",
+          "tolerance_down": "",
+          "upper_limit": "1800",
+          "lower_limit": "1500",
+          "unit": "µm"
+        },
+        "sc_symbols": [
+          {
+            "character": "C",
+            "shape": "none"
+          }
+        ],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "Auto check",
+          "in_charge": "Operator",
+          "calibration_interval": "6 Month"
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "ให้ตรวจสอบขณะที่ชิ้นงานถูกกดจนสุดจึงทำการวัด",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Linear guage",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 23,
+        "control_item_type": "Check sheet",
+        "parameter": {
+          "parameter": "Punch position confirm",
+          "master_value": 0,
+          "limit_type": "None",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "",
+          "lower_limit": "",
+          "unit": ""
+        },
+        "sc_symbols": [
+          {
+            "character": "F",
+            "shape": "circle"
           },
-          "sc_symbols": [],
-          "check_timing": "After",
-          "control_method": {
-            "sample_no": 1,
-            "interval": "1/W",
-            "100_method": "",
-            "in_charge": "LL to inspection",
-            "calibration_interval": ""
-          },
-          "initial_p_capability": {
-            "x_bar": "",
-            "cpk": ""
-          },
-          "remark": {
-            "remark": "",
-            "ws_no": "",
-            "related_std": ""
-          },
-          "measurement": "CMM",
-          "readability": "0.001",
-          "start_effective": "9-Sep-2022"
-        }
-      ]
-    }
-  ]
+          {
+            "character": "RW",
+            "shape": "rectangle"
+          }
+        ],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "At start, when change",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Visual",
+        "readability": "",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 24,
+        "control_item_type": "Check sheet",
+        "parameter": {
+          "parameter": "Appearance : ลวดต้องอยู่ในสภาพ\n-ไม่แบน, งอ\n-ปลายลวดต้องไม่มี burr",
+          "master_value": 0,
+          "limit_type": "None",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "",
+          "lower_limit": "",
+          "unit": ""
+        },
+        "sc_symbols": [
+          {
+            "character": "RW",
+            "shape": "rectangle"
+          }
+        ],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 2,
+          "interval": "4/Shift, when change",
+          "100_method": "Check",
+          "in_charge": "Operator",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "WS-001",
+          "related_std": ""
+        },
+        "measurement": "Visual",
+        "readability": "",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 25,
+        "control_item_type": "x-R chart",
+        "parameter": {
+          "parameter": "Coil diameter",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "Ø",
+          "main": "3.2",
+          "suffix": "±",
+          "tolerance_up": "0.1",
+          "tolerance_down": "",
+          "upper_limit": "3.3",
+          "lower_limit": "3.1",
+          "unit": ""
+        },
+        "sc_symbols": [
+          {
+            "character": "S",
+            "shape": "diamond"
+          }
+        ],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": "6 Month"
+        },
+        "initial_p_capability": {
+          "x_bar": "15.324",
+          "cpk": "3.124"
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": "TEC-001"
+        },
+        "measurement": "Micrometer",
+        "readability": "0.001",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 26,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Coil taper",
+          "master_value": 0,
+          "limit_type": "Upper only",
+          "prefix": "",
+          "main": "30",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "30",
+          "lower_limit": "",
+          "unit": "°"
+        },
+        "sc_symbols": [
+          {
+            "character": "S",
+            "shape": "circle"
+          }
+        ],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift, when change cutter",
+          "100_method": "",
+          "in_charge": "Operator",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Microscope",
+        "readability": "0.01",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 27,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Chamfer",
+          "master_value": 0,
+          "limit_type": "Lower only",
+          "prefix": "",
+          "main": "0.15",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "",
+          "lower_limit": "0.15",
+          "unit": "mm"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "1/W",
+          "100_method": "",
+          "in_charge": "LL to inspection",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "CMM",
+        "readability": "0.001",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 28,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-1",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [
+          {
+            "character": "SP",
+            "shape": "circle"
+          }
+        ],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 29,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-2",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 30,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-3",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 31,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-4",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 32,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-5",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 33,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-6",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 34,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-7",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 35,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Dummy-8",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "456",
+          "lower_limit": "123",
+          "unit": "N"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Tool",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 36,
+        "control_item_type": "Check sheet",
+        "parameter": {
+          "parameter": "ทำการตรวจสอบเครื่องจักรก่อนเริ่มการผลิต",
+          "master_value": 0,
+          "limit_type": "None",
+          "prefix": "",
+          "main": "",
+          "suffix": "",
+          "tolerance_up": "",
+          "tolerance_down": "",
+          "upper_limit": "",
+          "lower_limit": "",
+          "unit": ""
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "At start",
+          "100_method": "",
+          "in_charge": "LL",
+          "calibration_interval": ""
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Visual",
+        "readability": "",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 37,
+        "control_item_type": "xbar-R chart",
+        "parameter": {
+          "parameter": "Coil cutting length",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "17",
+          "suffix": "",
+          "tolerance_up": "1",
+          "tolerance_down": "-2",
+          "upper_limit": "15.5",
+          "lower_limit": "14.5",
+          "unit": "mm"
+        },
+        "sc_symbols": [
+          {
+            "character": "F",
+            "shape": "triangle"
+          }
+        ],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "None",
+          "in_charge": "Operator",
+          "calibration_interval": "6 Month"
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Caliper vernier",
+        "readability": "0.01",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 38,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Die position check",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "Amplitude",
+          "main": "1500",
+          "suffix": "~",
+          "tolerance_up": "1800",
+          "tolerance_down": "",
+          "upper_limit": "1800",
+          "lower_limit": "1500",
+          "unit": "µm"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "Auto check",
+          "in_charge": "Operator",
+          "calibration_interval": "6 Month"
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Linear guage",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 39,
+        "control_item_type": "x-R chart",
+        "parameter": {
+          "parameter": "Coil cutting length",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "",
+          "main": "17",
+          "suffix": "",
+          "tolerance_up": "1",
+          "tolerance_down": "-2",
+          "upper_limit": "15.5",
+          "lower_limit": "14.5",
+          "unit": "mm"
+        },
+        "sc_symbols": [
+          {
+            "character": "F",
+            "shape": "diamond"
+          }
+        ],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "None",
+          "in_charge": "Operator",
+          "calibration_interval": "6 Month"
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Caliper vernier",
+        "readability": "0.01",
+        "start_effective": "9-Sep-2022"
+      },
+      {
+        "control_item_no": 40,
+        "control_item_type": "Record sheet",
+        "parameter": {
+          "parameter": "Die position check",
+          "master_value": 0,
+          "limit_type": "Both",
+          "prefix": "Amplitude",
+          "main": "1500",
+          "suffix": "~",
+          "tolerance_up": "1800",
+          "tolerance_down": "",
+          "upper_limit": "1800",
+          "lower_limit": "1500",
+          "unit": "µm"
+        },
+        "sc_symbols": [],
+        "check_timing": "After",
+        "control_method": {
+          "sample_no": 1,
+          "interval": "4/Shift",
+          "100_method": "Auto check",
+          "in_charge": "Operator",
+          "calibration_interval": "6 Month"
+        },
+        "initial_p_capability": {
+          "x_bar": "",
+          "cpk": ""
+        },
+        "remark": {
+          "remark": "",
+          "ws_no": "",
+          "related_std": ""
+        },
+        "measurement": "Linear guage",
+        "readability": "1",
+        "start_effective": "9-Sep-2022"
+      }
+    ]
+  }
 }

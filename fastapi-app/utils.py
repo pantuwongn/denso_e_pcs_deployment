@@ -6,6 +6,7 @@ from openpyxl.styles.fonts import Font
 from openpyxl.drawing.text import TextField
 
 outputDir = 'output'
+tempDir = 'temp'
 bottomRightBorder = Border(
     bottom = Side(style='thin'),
     right = Side(style='thin'),
@@ -15,6 +16,31 @@ rightBorder = Border(
 )
 bottomBorder = Border(
     bottom = Side(style='thin'),
+)
+
+topDashBottomBorder = Border(
+    top = Side(style='dashed'),
+    bottom = Side(style='thin')
+)
+
+boxTopDashBorder = Border(
+    top = Side(style='dashed'),
+    bottom = Side(style='thin'),
+    left = Side(style='thin'),
+    right = Side(style='thin')
+)
+
+boxNoTopBorder = Border(
+    bottom = Side(style='thin'),
+    left = Side(style='thin'),
+    right = Side(style='thin')
+)
+
+boxBorder = Border(
+    top = Side(style='thin'),
+    bottom = Side(style='thin'),
+    left = Side(style='thin'),
+    right = Side(style='thin')   
 )
 
 leftCenterAlignment = Alignment(
@@ -37,7 +63,8 @@ topLeftAlignment = Alignment(
     vertical='top',
     wrap_text=True
 )
-headerNormalStyle = Font(name='CordiaUPC', size=12, color='000000')
+headerNormalStyle = Font(name='CordiaUPC', size=14, color='000000')
+headerBoldStyle = Font(name='CordiaUPC', size=14, color='000000', bold=True)
 textNormalStyle = Font(name='CordiaUPC', size=10, color='000000')
 
 def getOutputFilePath(fileName):
@@ -69,7 +96,7 @@ def drawVerticalDashedLine(height: int):
     for y in range(cur_y, height, length + space):
         d.line([0, y, 0, y + length], fill=(0, 0, 0), width=1)
     # img.show()
-    filename = "temp/" + datetime.now().strftime("%Y%m%d%H%M%S%f") + ".png"
+    filename = '{}/{}.png'.format(tempDir, datetime.now().strftime("%Y%m%d%H%M%S%f"))
     # print(filename)
     img.save(filename)
     return filename
