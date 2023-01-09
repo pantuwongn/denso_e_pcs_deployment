@@ -384,7 +384,6 @@ class PCSForm:
             sheet.merge_cells('E{}:H{}'.format(startRow + (rowStep * i) + (rowStep - 1), startRow + (rowStep * i) + (rowStep - 1)))
             sheet.merge_cells('M{}:N{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + (rowStep - 1)))
             sheet.merge_cells('O{}:O{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + (rowStep - 1)))
-            sheet.merge_cells('I{}:I{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + 1))
             sheet.merge_cells('J{}:J{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + 1))
             sheet.merge_cells('K{}:K{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + 1))
             sheet.merge_cells('M7:O7')
@@ -415,20 +414,24 @@ class PCSForm:
             sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 1)), column=5).font = textNormalStyle
             sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 1)), column=5).alignment = topLeftAlignment
             if item['control_method']['100_method'] == 'Auto check':
-                sheet.cell(row=(startRow + (rowStep * i) + 1), column=9).border = bottomBorder
+                sheet.cell(row=(startRow + (rowStep * i) + 1), column=9).font = textLargeContentStyle
+                sheet.cell(row=(startRow + (rowStep * i)), column=9).border = bottomBorder
                 sheet.cell(row=(startRow + (rowStep * i)), column=9).value = '100%'
 
                 intervalText = item['control_method']['interval']
                 if item['control_method']['sample_no'] > 1:
-                    sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 2)), column=9).value = '{}\n(n={})'.format(intervalText, item['control_method']['sample_no'])
+                    sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 3)), column=9).value = intervalText
+                    sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 2)), column=9).value = '(n={})'.format(item['control_method']['sample_no'])
                 else:
-                    sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 2)), column=9).value = item['control_method']['interval']
+                    sheet.merge_cells('I{}:I{}'.format(startRow + (rowStep * i)+1, startRow + (rowStep * i) + 2))
+                    sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 3)), column=9).value = item['control_method']['interval']
                 
             else:
+                sheet.cell(row=(startRow + (rowStep * i)), column=9).font = textLargeContentStyle
+                sheet.merge_cells('I{}:I{}'.format(startRow + (rowStep * i), startRow + (rowStep * i) + 1))
                 sheet.cell(row=(startRow + (rowStep * i)), column=9).value = item['control_method']['interval']
                 if item['control_method']['sample_no'] > 1:
                     sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 2)), column=9).value = '(n={})'.format(item['control_method']['sample_no'])
-            sheet.cell(row=(startRow + (rowStep * i)), column=9).font = textLargeContentStyle
             sheet.cell(row=(startRow + (rowStep * i)), column=9).alignment = centerCenterAlignment
             sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 1)), column=9).value = item['control_method'].get('calibration_interval', '')
             sheet.cell(row=(startRow + (rowStep * i) + (rowStep - 1)), column=9).alignment = centerCenterAlignment
