@@ -71,7 +71,7 @@ class PCSForm:
                 drawer.writeBody(currentRow, controlMethodIntervalCol, pcsItemPage.controlMethodIntervalType)
                 drawer.writeBody(currentRow + len(pcsItemPage.controlMethodIntervalType), controlMethodIntervalCol, pcsItemPage.controlMethodIntervalPeriod)
                 drawer.writeBody(currentRow + len(pcsItemPage.controlMethodIntervalType) + len(pcsItemPage.controlMethodIntervalPeriod), controlMethodIntervalCol, pcsItemPage.controlMethodSampleNo)
-                drawer.writeBody(currentRow + len(pcsItemPage.controlMethodIntervalType) + len(pcsItemPage.controlMethodIntervalPeriod) + len(pcsItemPage.controlMethodSampleNo), controlMethodIntervalCol, pcsItemPage.controlMethodCalibrationInterval)
+                drawer.writeBody(currentRow + pcsItemPage.height - 1, controlMethodIntervalCol, pcsItemPage.controlMethodCalibrationInterval)
 
                 #   control method col
                 drawer.writeBody(currentRow, controlMethodCol, pcsItemPage.controlMethodType)
@@ -85,7 +85,7 @@ class PCSForm:
                 drawer.writeBody(currentRow, processCapabilityCol, pcsItemPage.processCapability)
 
                 #   remark col
-                drawer.writeBody(currentRow, remarkCol, pcsItemPage.remark)
+                drawer.writeBody(currentRow, remarkCol, pcsItemPage.remark, 'left')
 
                 #   relate standard col
                 drawer.writeBody(currentRow, relateStandardCol, pcsItemPage.relateStandard)
@@ -125,7 +125,6 @@ class PCSForm:
     def _mergeBody(self, sheet: Worksheet):
         for i in range(51):
             sheet.merge_cells('E{}:H{}'.format(self.itemStartRow + i, self.itemStartRow + i))
-            sheet.merge_cells('M{}:N{}'.format(self.itemStartRow + i, self.itemStartRow + i))
 
     def _createItemBorder(self, sheet: Worksheet, rowStart: int, pcsItemPage: PCSItemPage):
         sheet.cell(rowStart + pcsItemPage.height - 1, 4).border = Border(
@@ -144,10 +143,17 @@ class PCSForm:
                 left=Side(style='thin'),
                 right=Side(style='thin'),
             )
+        sheet.cell(rowStart + pcsItemPage.height - 1, 13).border = Border(
+            bottom=Side(style='thin'),
+        )
+        sheet.cell(rowStart + pcsItemPage.height - 1, 14).border = Border(
+            bottom=Side(style='thin'),
+            right=Side(style='thin'),
+        )
 
         if len(pcsItemPage.controlMethodIntervalType) > 0:
             sheet.cell(rowStart, 9).border = Border(
-                bottom=Side(style='thin'),
+                bottom=Side(style='dashed'),
                 left=Side(style='thin'),
                 right=Side(style='thin'),
                 top=Side(style='thin')
@@ -155,7 +161,7 @@ class PCSForm:
         
         if len(pcsItemPage.controlMethodType) > 0 and pcsItemPage.controlMethodType[0] == 'Auto check':
             sheet.cell(rowStart, 10).border = Border(
-                bottom=Side(style='thin'),
+                bottom=Side(style='dashed'),
                 left=Side(style='thin'),
                 right=Side(style='thin'),
                 top=Side(style='thin')
@@ -196,3 +202,4 @@ class PCSForm:
 
     def _cleanTempDir(self):
         shutil.rmtree(self.tempDir)
+        

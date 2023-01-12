@@ -149,10 +149,10 @@ class PCSItemPage:
 
     @property
     def measuredValue(self):
-        def _appendTextIfExist(targetStr: str, dataDict: dict, key: str):
+        def _appendTextIfExist(targetStr: str, dataDict: dict, key: str, spaced = False):
             finalText = targetStr
             if dataDict.get(key, '').strip() != '':
-                finalText = '{}{}'.format(targetStr, dataDict[key])
+                finalText = '{}{}{}'.format(targetStr, ' ' if spaced else '', dataDict[key])
             return finalText
 
         result = ''
@@ -161,7 +161,7 @@ class PCSItemPage:
         result = _appendTextIfExist(result, self.processItem['parameter'], 'suffix')
         result = _appendTextIfExist(result, self.processItem['parameter'], 'tolerance_up')
         result = _appendTextIfExist(result, self.processItem['parameter'], 'tolerance_down')
-        result = _appendTextIfExist(result, self.processItem['parameter'], 'unit')
+        result = _appendTextIfExist(result, self.processItem['parameter'], 'unit', True)
         return [] if result == '' else [result]
     
     @property

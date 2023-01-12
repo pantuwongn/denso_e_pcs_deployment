@@ -207,7 +207,7 @@ class PCSSheetDrawer:
 
 
             self._drawVerticalDashedLine(
-                totalHeight - (pcsItemList[0].height / 2) - (pcsItemList[-1].height / 2),
+                totalHeight - (pcsItemList[0].height / 2) - (pcsItemList[-1].height / 2) - 0.6,
                 getRowOfItem(idxList[0]),
                 1,
                 (pcsItemList[0].height / 2) * 4 + 1,
@@ -237,7 +237,7 @@ class PCSSheetDrawer:
         def drawAbsoluteImage(img, rowOff, colOff):
             h, w = img.height, img.width
             size = XDRPositiveSize2D(p2e(w), p2e(h))
-            position = XDRPoint2D(p2e(523 + colOff), p2e(135 + rowOff))
+            position = XDRPoint2D(p2e(568 + colOff), p2e(130 + rowOff))
             img.anchor = AbsoluteAnchor(pos=position, ext=size)
             return img
 
@@ -264,7 +264,7 @@ class PCSSheetDrawer:
         self.sheet.add_image(img)
 
     def drawCheckProcessDashedLine(self):
-        self._drawVerticalDashedLine(self.maxHeight, self.itemStartRow - 1, 0, -0.5, 7.5)
+        self._drawVerticalDashedLine(self.maxHeight, self.itemStartRow - 1, 0, -0.5, 7.5, 0, -26)
 
     def drawCheckProcess(self, row):
         img = self._createImage(
@@ -289,7 +289,7 @@ class PCSSheetDrawer:
 
         self.sheet.add_image(img)
 
-    def _drawVerticalDashedLine(self, height, row, col, rowOff, colOff):
+    def _drawVerticalDashedLine(self, height, row, col, rowOff, colOff, wOff = 0, hOff = 0):
         height = EMU_to_pixels(c2e(height) * 0.45)
         fileImg = PILImage.new("RGB", (1, height), (255, 255, 255))
         d = ImageDraw.Draw(fileImg)
@@ -301,7 +301,7 @@ class PCSSheetDrawer:
         filename = '{}/{}.png'.format(self.tempDir, datetime.now().strftime("%Y%m%d%H%M%S%f"))
         fileImg.save(filename)
 
-        img = self._createImage(Image(filename), row, col, rowOff, colOff)
+        img = self._createImage(Image(filename), row, col, rowOff, colOff, wOff, hOff)
         self.sheet.add_image(img)
 
     def _createImage(self, img, row, col, rowOff = 0, colOff = 0, wOff = 0, hOff = 0):
