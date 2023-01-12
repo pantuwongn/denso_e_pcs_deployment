@@ -40,14 +40,14 @@ def api_key_auth(x_api_key: str = Depends(X_API_KEY)):
         )
 
 @app.get("/api/get_mock_data", dependencies=[Depends(api_key_auth)])
-def get_mock_data():
+async def get_mock_data():
     with open('pcs_controlitem.json') as f:
         data = json.load(f)
 
     return data
 
 @app.post("/api/convert_json_to_xlsx", dependencies=[Depends(api_key_auth)])
-def create_data(data: Dict[str, Union[str, List, Dict]]):
+async def create_data(data: Dict[str, Union[str, List, Dict]]):
     templateFilePath = './templates/e-pcs-control-item-form-template.xlsx'
     random_name = str(uuid.uuid4())
     PCSForm(templateFilePath, data).generate(random_name)
