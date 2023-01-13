@@ -101,13 +101,13 @@ class PCSForm:
 
                 currentRow += pcsItemPage.height
 
-            #   draw check timing
-            drawer.drawCheckTiming(pcsHeaderPage.itemList, pcsHeaderPage.summaryTimingDict)
-
             #   draw control item connector
             beforePageItem = pcsHeaderPageList[i - 1].itemList[-1] if i - 1 >= 0 else None
             afterPageItem = pcsHeaderPageList[i + 1].itemList[0] if i + 1 < len(pcsHeaderPageList) else None
             drawer.drawControlItemConnectorGroup(pcsHeaderPage.itemList, pcsHeaderPage.summaryTimingDict, beforePageItem, afterPageItem)
+            
+            #   draw check timing
+            drawer.drawCheckTiming(pcsHeaderPage.itemList, pcsHeaderPage.summaryTimingDict)
         
         self._saveWorkbook(fileName)
         self._cleanTempDir()

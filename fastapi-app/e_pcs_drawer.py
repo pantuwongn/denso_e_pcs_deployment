@@ -111,14 +111,11 @@ class PCSSheetDrawer:
             if len(beforeList) == 0 and len(afterList) == 0:
                 landIndex = len(pcsItemList) / 2
                 landProcessRow = getRowOfItem(landIndex)
-                self.drawCheckProcessConnector(landProcessRow)
             elif len(beforeList) == 0:
                 landProcessRow = self.itemStartRow - 1
-                self.drawCheckProcessConnector(landProcessRow)
             else:
                 landIndex = duringList[int(len(duringList) / 2)]
                 landProcessRow = getRowOfItem(landIndex)
-                self.drawCheckProcessConnector(landProcessRow)
         else:
             if len(beforeList) == 0:
                 landProcessRow = self.itemStartRow - 1
@@ -130,7 +127,6 @@ class PCSSheetDrawer:
                 firstAfter = afterList[0]
                 landIndex = (lastBefore + firstAfter) / 2
                 landProcessRow = getRowOfItem(landIndex)
-
         self.drawCheckProcess(landProcessRow)
 
     def drawScSymbolList(self, rowStart: int, rowHeight: int, scSymbolList: list):
@@ -225,6 +221,20 @@ class PCSSheetDrawer:
                     0,
                     0
                 )
+        def drawCheckProcessConnectorToGroup(groupListList):
+            for groupList in groupListList:
+                groupLength = len(groupList)
+                if groupLength == 1:
+                    connectRow = getRowOfItem(groupList[0])
+                else:
+                    halfIndex = groupLength / 2
+                    connectIndex = int(halfIndex - 1) if int(halfIndex) == halfIndex else int(halfIndex)
+                    connectRow = getRowOfItem(groupList[connectIndex])
+                self.drawCheckProcessConnector(connectRow)
+
+        drawCheckProcessConnectorToGroup(list(duringGroupDict.values()))
+        drawCheckProcessConnectorToGroup(list(beforeGroupDict.values()))
+        drawCheckProcessConnectorToGroup(list(afterGroupDict.values()))
 
         for duringGroupList in duringGroupDict.values():
             drawConnectorGroup(duringGroupList)
@@ -277,7 +287,7 @@ class PCSSheetDrawer:
         self.sheet.add_image(img)
 
     def drawCheckProcessConnector(self, row):
-        self._drawHorizontalDashedLine(row, 0, 7, 14)
+        self._drawHorizontalDashedLine(row, 0, 7, 8)
 
     def _drawHorizontalDashedLine(self, row, col, rowOff, colOff):
         img = self._createImage(
